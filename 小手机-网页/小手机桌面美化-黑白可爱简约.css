@@ -1,0 +1,186 @@
+/* ============================================================
+   小手机 · 桌面美化 · 黑白可爱简约风
+   ------------------------------------------------------------
+   使用方法：打开小手机 → 底部「美化」→ 自定义 CSS →
+   把本文件全部内容粘贴进去 → 保存美化设置。
+   仅作用于模拟手机桌面，不影响内部应用。
+   （本文件是独立交付物，未对小手机本体做任何修改）
+   ============================================================ */
+
+/* ========== 1. 桌面壁纸：米白底 + 黑色圆点波点纹 ========== */
+[class*="from-slate-700"][class*="via-slate-800"][class*="to-slate-900"] {
+  background-color: #faf9f7 !important;
+  background-image:
+    radial-gradient(rgba(20, 20, 20, 0.10) 1.3px, transparent 1.3px),
+    radial-gradient(rgba(20, 20, 20, 0.06) 1.3px, transparent 1.3px) !important;
+  background-size: 26px 26px, 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+/* ========== 2. 状态栏：白底黑字，清爽 ========== */
+[class*="pointer-events-none"][class*="z-50"][class*="justify-between"] {
+  color: #1a1a1a !important;
+}
+[class*="pointer-events-none"][class*="z-50"][class*="justify-between"] .lucide {
+  color: #1a1a1a !important;
+}
+
+/* ========== 3. 应用图标：白底黑边 + 贴纸硬阴影 ========== */
+.w-14.h-14[class*="bg-gradient-to-br"] {
+  background: #ffffff !important;
+  border: 2px solid #1a1a1a !important;
+  border-radius: 18px !important;
+  box-shadow: 3px 3px 0 rgba(20, 20, 20, 0.85) !important;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease !important;
+}
+.w-14.h-14[class*="bg-gradient-to-br"] .lucide {
+  color: #1a1a1a !important;
+}
+/* 悬停：轻轻弹起 + 微旋转，可爱感 */
+.w-14.h-14[class*="bg-gradient-to-br"]:hover {
+  transform: translateY(-3px) rotate(-4deg) scale(1.05) !important;
+  box-shadow: 5px 6px 0 rgba(20, 20, 20, 0.85) !important;
+}
+.w-14.h-14[class*="bg-gradient-to-br"]:active {
+  transform: scale(0.92) !important;
+}
+
+/* 图标下方的应用名：黑色 */
+[class*="drop-shadow-md"][class*="font-medium"] {
+  color: #1a1a1a !important;
+  text-shadow: none !important;
+}
+
+/* ========== 4. Dock：磨砂白玻璃 + 黑描边 ========== */
+[class*="backdrop-blur-xl"][class*="rounded-3xl"] {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 2px solid #1a1a1a !important;
+  box-shadow: 0 12px 28px rgba(20, 20, 20, 0.14) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+}
+
+/* ========== 5. 明信片：纯白卡片 + 硬阴影 ========== */
+[class*="rounded-3xl"][class*="from-slate-200"][class*="to-slate-300"] {
+  background: #ffffff !important;
+  border: 2px solid #1a1a1a !important;
+  box-shadow: 4px 4px 0 rgba(20, 20, 20, 0.85) !important;
+  border-radius: 24px !important;
+}
+/* 明信片头像：大白圈 + 黑描边 */
+[class*="border-4"][class*="shadow-lg"][class*="overflow-hidden"] {
+  border-color: #1a1a1a !important;
+  box-shadow: 3px 3px 0 rgba(20, 20, 20, 0.30) !important;
+  background: #ffffff !important;
+}
+/* 明信片头像占位文字 */
+[class*="bg-slate-200"][class*="text-slate-400"] {
+  background: #f3f3f1 !important;
+  color: #9a9a96 !important;
+}
+
+/* ========== 6. 拍立得相框：白框 + 黑描边 + 贴纸阴影 ========== */
+[class*="-rotate-6"][class*="bg-white"] {
+  border: 2px solid #1a1a1a !important;
+  background: #ffffff !important;
+}
+[class*="rotate-3"][class*="bg-white"] {
+  border: 2px solid #1a1a1a !important;
+  background: #ffffff !important;
+  box-shadow: 4px 4px 0 rgba(20, 20, 20, 0.22) !important;
+}
+[class*="bg-slate-100"][class*="rounded-sm"] {
+  background: #efefec !important;
+  border: 1px dashed #c9c9c4 !important;
+  border-radius: 6px !important;
+}
+
+/* ========== 7. 小对话组件：黑白双色气泡 ========== */
+/* 好友头像（白圈黑边）与用户头像（黑圈白边） */
+.w-6.h-6[class*="rounded-full"] {
+  background: #ffffff !important;
+  border: 1.5px solid #1a1a1a !important;
+}
+[class*="justify-end"][class*="pl-4"] .w-6.h-6[class*="rounded-full"] {
+  background: #1a1a1a !important;
+  border: 1.5px solid #1a1a1a !important;
+}
+/* 好友气泡：白底黑边 */
+[class*="rounded-bl-sm"][class*="shadow-sm"] {
+  background: #ffffff !important;
+  border: 1.5px solid #1a1a1a !important;
+  box-shadow: 2px 2px 0 rgba(20, 20, 20, 0.18) !important;
+}
+/* 用户气泡：黑底白边 */
+[class*="rounded-br-sm"][class*="shadow-sm"] {
+  background: #1a1a1a !important;
+  border: 1.5px solid #1a1a1a !important;
+  box-shadow: 2px 2px 0 rgba(20, 20, 20, 0.25) !important;
+}
+[class*="rounded-br-sm"] [class*="text-white"] {
+  color: #ffffff !important;
+}
+
+/* ========== 8. 音乐箱：白色小唱片机 ========== */
+[class*="backdrop-blur-md"][class*="rounded-2xl"] {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 2px solid #1a1a1a !important;
+  border-radius: 18px !important;
+  box-shadow: 3px 3px 0 rgba(20, 20, 20, 0.20) !important;
+}
+/* 音乐图标盒 */
+[class*="w-10"][class*="rounded-lg"][class*="bg-gradient-to-br"] {
+  background: #ffffff !important;
+  border: 1.5px solid #1a1a1a !important;
+}
+[class*="w-10"][class*="rounded-lg"] .lucide {
+  color: #1a1a1a !important;
+}
+/* 歌曲名 / 艺术家 / 时间：黑色系 */
+[class*="text-12px"][class*="font-semibold"] {
+  color: #1a1a1a !important;
+}
+[class*="text-10px"][class*="text-white/70"] {
+  color: #6b6b66 !important;
+}
+[class*="text-9px"][class*="tabular-nums"] {
+  color: #6b6b66 !important;
+}
+/* 进度条 */
+[class*="bg-white/30"][class*="rounded-full"] {
+  background: #dcdcd8 !important;
+}
+[class*="bg-white/30"][class*="rounded-full"] > div {
+  background: #1a1a1a !important;
+}
+/* 上一曲 / 下一曲：黑色 */
+[class*="w-7"][class*="text-white/80"] {
+  color: #1a1a1a !important;
+}
+[class*="w-7"][class*="text-white/80"]:hover {
+  color: #555555 !important;
+}
+/* 播放按钮：黑圆 + 白图标 */
+[class*="w-9"][class*="bg-white"][class*="rounded-full"] {
+  background: #1a1a1a !important;
+  border: 2px solid #1a1a1a !important;
+  box-shadow: 2px 2px 0 rgba(20, 20, 20, 0.30) !important;
+  transition: transform 0.15s ease !important;
+}
+[class*="w-9"][class*="bg-white"][class*="rounded-full"] .lucide {
+  color: #ffffff !important;
+}
+[class*="w-9"][class*="bg-white"][class*="rounded-full"]:hover {
+  transform: scale(1.08) !important;
+}
+[class*="w-9"][class*="bg-white"][class*="rounded-full"]:active {
+  transform: scale(0.9) !important;
+}
+
+/* ========== 9. 桌面整体细节：让黑白更统一 ========== */
+/* 主内容区微调间距，呼吸感更强 */
+[class*="flex-1"][class*="px-4"][class*="py-2"] {
+  padding: 12px 14px !important;
+}
+
+/* 编辑模式下（长按）图标轻微晃动由应用自带，此处不干扰 */
